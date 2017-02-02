@@ -1,2 +1,4 @@
 .idea
 *.pem
+node_modules/
+*.swp

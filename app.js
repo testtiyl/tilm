@@ -6,10 +6,14 @@ var app = express();
 var bodyParser = require('body-parser');
 
 // configure the app to use bodyParser()
-app.use(bodyParser.urlencoded({
-    extended: false
-}));
+//app.use(bodyParser.json())
+//app.use(express.bodyParser());
 
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
+//app.use(express.favicon());
 app.use(bodyParser.json())
 mongoose.connect('mongodb://localhost:27017/test');
 
@@ -36,4 +40,4 @@ app.listen(3001, function() {
   console.log('listening on 3001')
 });
 
-module.exports = app
+module.exports = app;

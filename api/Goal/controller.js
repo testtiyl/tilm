@@ -27,7 +27,7 @@ GoalController.getAllGoals = function (req, res) {
 
 GoalController.createGoal = function(req, res) {
 	// @params
-	console.log(req, req.body)
+	console.log(req.body)
 	var body = req.body;
 	var categoryId = body.category_id
 	console.log(body)
